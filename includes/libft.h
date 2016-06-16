@@ -6,7 +6,7 @@
 /*   By: lgatibel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 11:43:07 by lgatibel          #+#    #+#             */
-/*   Updated: 2016/06/13 11:02:29 by lgatibel         ###   ########.fr       */
+/*   Updated: 2016/06/16 16:29:00 by lgatibel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,9 @@ char			*ft_strncpy(char *dest, const char *src, size_t n);
 char			*ft_strnstr(const char *s1, const char *s2, size_t n);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char			*ft_strsub(char const *s, unsigned int start, size_t len);
-double			ft_square_root(double nb);
 double			ft_absolute(double nb);
+double			ft_atod(const char *str);
+double			ft_square_root(double nb);
 int				ft_power(int nb, int power);
 int				ft_isalpha(int c);
 int				ft_isdigit(int c);
@@ -61,8 +62,8 @@ int				ft_isascii(int c);
 int				ft_isprint(int c);
 int				ft_toupper(int c);
 int				ft_tolower(int c);
-int				ft_strichr(const char *s, int c);
 int				ft_atoi(const char *str);
+int				ft_strichr(const char *s, int c);
 int				ft_strcmp(const char *s1, const char *s2);
 int				ft_strequ(const char *s1, const char *s2);
 int				get_next_line(int const fd, char **line);
