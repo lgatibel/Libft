@@ -6,13 +6,13 @@
 /*   By: lgatibel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 16:27:52 by lgatibel          #+#    #+#             */
-/*   Updated: 2016/06/16 17:02:59 by lgatibel         ###   ########.fr       */
+/*   Updated: 2016/06/16 17:13:45 by lgatibel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-static double	ft_calc(const char *str, int i)
+
+static double		ft_calc(const char *str, int i)
 {
 	double	n;
 	int		nd;
@@ -23,7 +23,6 @@ static double	ft_calc(const char *str, int i)
 	i -= 1;
 	while (ft_isdigit(str[++i]))
 		n = (n * 10) + str[i] - 48;
-		printf("test\n");
 	if (str[i] && str[i] == '.')
 	{
 		decimal = ft_strdup(&str[i + 1]);
@@ -33,13 +32,12 @@ static double	ft_calc(const char *str, int i)
 		i = (i > 6) ? 6 : i;
 		decimal[i] = '\0';
 		n += ((double)ft_atoi(decimal) / (double)ft_power(10, i));
-		printf("decimal[%s], i[%d]\n, power[%d]",decimal,i, ft_power(10,i));
 		ft_strdel(&decimal);
 	}
 	return (n);
 }
 
-static int		ft_is_space(const char *str)
+static int			ft_is_space(const char *str)
 {
 	char	tab[5];
 	int		index;
