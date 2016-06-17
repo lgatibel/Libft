@@ -10,16 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 static double		ft_calc(const char *str, int i)
 {
 	double	n;
-	int		nd;
 	char	*decimal;
 
 	n = 0;
-	nd = 0;
 	i -= 1;
 	while (ft_isdigit(str[++i]))
 		n = (n * 10) + str[i] - 48;
@@ -59,14 +57,16 @@ static int			ft_is_space(const char *str)
 double				ft_atod(const char *str)
 {
 	int			i;
-	double		sign;
+	int			sign;
+	double		nb;
 
 	i = -1;
 	sign = 1;
 	while (str[++i])
 	{
 		if (ft_isdigit(str[i]))
-			return (sign * ft_calc(str, i));
+			return (((nb = ft_calc(str, i)) == 0)
+			? 0 : nb * sign);
 		if (str[i] == '-' || str[i] == '+')
 		{
 			if (!ft_isdigit(str[i + 1]))
