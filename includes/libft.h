@@ -6,7 +6,7 @@
 /*   By: lgatibel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 11:43:07 by lgatibel          #+#    #+#             */
-/*   Updated: 2016/06/16 16:29:00 by lgatibel         ###   ########.fr       */
+/*   Updated: 2016/06/20 14:19:08 by lgatibel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,10 @@ int				ft_isascii(int c);
 int				ft_isprint(int c);
 int				ft_toupper(int c);
 int				ft_tolower(int c);
+
 int				ft_atoi(const char *str);
+int				ft_atoi_base(const char *str, int base);
+
 int				ft_strichr(const char *s, int c);
 int				ft_strcmp(const char *s1, const char *s2);
 int				ft_strequ(const char *s1, const char *s2);
