@@ -12,14 +12,18 @@
 
 #include "libft.h"
 
-static int		ft_calc(const char *str, int i)
+static int		ft_calc(const char *str, int i, int base)
 {
-	int n;
+	int		n;
+	int		pow;
 
 	n = 0;
 	i -= 1;
-	while (ft_isdigit(str[++i]))
-		n = (n * 10) + str[i] - 48;
+	pow = -1;
+	while (ft_isdigit(str[++i]) && pow < 8)
+	{
+		n += (ft_power(base, ++pow)) * (str[i] - 48);
+	}
 	return (n);
 }
 
@@ -52,7 +56,7 @@ int				ft_atoi_base(const char *str, int base)
 	while (str[++i])
 	{
 		if (ft_isdigit(str[i]))
-			return (sign * ft_calc(str, i));
+			return (sign * ft_calc(str, i, base));
 		if (str[i] == '-' || str[i] == '+')
 		{
 			if (!ft_isdigit(str[i + 1]))

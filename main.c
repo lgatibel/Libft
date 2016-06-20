@@ -1,8 +1,10 @@
 #include <libft.h>
+#include <stdio.h>
+#include <stdio.h>
 
 int			main(int ac, char **av)
 {
-	ft_putnbr(ft_atoi_base(av[1], 10));
-	ft_putchar('\n');
+	printf("atoi[%d]\n",atoi(av[1]));
+	printf("ft_atoi[%d]\n",ft_atoi_base(av[1], 2));
 	return(0);
 }
