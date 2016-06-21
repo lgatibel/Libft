@@ -6,7 +6,7 @@
 /*   By: lgatibel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 16:27:52 by lgatibel          #+#    #+#             */
-/*   Updated: 2016/06/16 17:13:45 by lgatibel         ###   ########.fr       */
+/*   Updated: 2016/06/21 15:41:40 by lgatibel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,25 +35,6 @@ static double		ft_calc(const char *str, int i)
 	return (n);
 }
 
-static int			ft_is_space(const char *str)
-{
-	char	tab[5];
-	int		index;
-
-	tab[0] = '\n';
-	tab[1] = '\t';
-	tab[2] = '\v';
-	tab[3] = '\r';
-	tab[4] = '\f';
-	index = 0;
-	while (tab[index] != str[0])
-		index++;
-	if (!tab[index] && !ft_isdigit(str[0]) && (str[0] != '-' &&
-		str[0] != '+'))
-		return (0);
-	return (1);
-}
-
 double				ft_atod(const char *str)
 {
 	int			i;
@@ -65,15 +46,14 @@ double				ft_atod(const char *str)
 	while (str[++i])
 	{
 		if (ft_isdigit(str[i]))
-			return (((nb = ft_calc(str, i)) == 0)
-			? 0 : nb * sign);
+			return (((nb = ft_calc(str, i)) == 0) ? 0 : nb * sign);
 		if (str[i] == '-' || str[i] == '+')
 		{
 			if (!ft_isdigit(str[i + 1]))
 				return (0);
 			sign = 44 - str[i];
 		}
-		else if (!ft_is_space(&str[i]))
+		else if (!ft_is_space(str[i]))
 			return (0);
 	}
 	return (0);

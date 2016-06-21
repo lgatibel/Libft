@@ -6,7 +6,7 @@
 /*   By: lgatibel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 11:43:07 by lgatibel          #+#    #+#             */
-/*   Updated: 2016/06/16 16:29:00 by lgatibel         ###   ########.fr       */
+/*   Updated: 2016/06/21 15:40:16 by lgatibel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,8 @@ double			ft_absolute(double nb);
 double			ft_atod(const char *str);
 double			ft_square_root(double nb);
 int				ft_power(int nb, int power);
+
+int				ft_ishexa(int c);
 int				ft_isalpha(int c);
 int				ft_isdigit(int c);
 int				ft_isalnum(int c);
@@ -62,7 +64,12 @@ int				ft_isascii(int c);
 int				ft_isprint(int c);
 int				ft_toupper(int c);
 int				ft_tolower(int c);
+
 int				ft_atoi(const char *str);
+int				ft_atoi_base(const char *str, int base);
+
+int				ft_is_space(const char c);
+
 int				ft_strichr(const char *s, int c);
 int				ft_strcmp(const char *s1, const char *s2);
 int				ft_strequ(const char *s1, const char *s2);

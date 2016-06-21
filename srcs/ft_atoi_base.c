@@ -1,29 +1,53 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_atoi_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lgatibel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 16:27:52 by lgatibel          #+#    #+#             */
-/*   Updated: 2016/06/21 15:38:49 by lgatibel         ###   ########.fr       */
+/*   Updated: 2016/06/21 15:41:51 by lgatibel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		ft_calc(const char *str, int i)
+static int		ft_base(char str, int base)
 {
-	int n;
+	static char		tab_maj[16] = {'0', '1', '2', '3', '4', '5', '6', '7', '8',
+		'9', 'A', 'B', 'C', 'D', 'E', 'F'};
+	static char		tab_min[16] = {'0', '1', '2', '3', '4', '5', '6', '7', '8',
+		'9', 'a', 'b', 'c', 'd', 'e', 'f'};
+	int				i;
+
+	i = -1;
+	while (tab_min[++i] && i < base)
+		if (str == tab_min[i] || str == tab_maj[i])
+			return (i);
+	return (-1);
+}
+
+static int		ft_calc(const char *str, int i, int base)
+{
+	int		n;
+	int		pow;
+	int		tmp;
 
 	n = 0;
 	i -= 1;
-	while (ft_isdigit(str[++i]))
-		n = (n * 10) + str[i] - 48;
+	pow = -1;
+	while (ft_ishexa(str[++i]))
+		;
+	while (ft_ishexa(str[--i]))
+	{
+		if ((tmp = ft_base(str[i], base)) == -1)
+			break ;
+		n += (ft_power(base, ++pow)) * tmp;
+	}
 	return (n);
 }
 
-int				ft_atoi(const char *str)
+int				ft_atoi_base(const char *str, int base)
 {
 	int	i;
 	int	sign;
@@ -32,11 +56,11 @@ int				ft_atoi(const char *str)
 	sign = 1;
 	while (str[++i])
 	{
-		if (ft_isdigit(str[i]))
-			return (sign * ft_calc(str, i));
+		if (ft_ishexa(str[i]))
+			return (sign * ft_calc(str, i, base));
 		if (str[i] == '-' || str[i] == '+')
 		{
-			if (!ft_isdigit(str[i + 1]))
+			if (!ft_ishexa(str[i + 1]))
 				return (0);
 			sign = 44 - str[i];
 		}
