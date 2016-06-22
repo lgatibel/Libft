@@ -6,7 +6,7 @@
 #    By: lgatibel <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/30 09:23:55 by lgatibel          #+#    #+#              #
-#    Updated: 2016/06/21 15:39:41 by lgatibel         ###   ########.fr        #
+#    Updated: 2016/06/22 14:23:39 by lgatibel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ ft_strcmp.c ft_strcpy.c ft_strdel.c ft_strdup.c ft_strequ.c ft_striter.c ft_stri
 ft_strlen.c ft_strmap.c ft_strmapi.c ft_strncat.c ft_strncmp.c ft_strncpy.c ft_strnequ.c ft_strnew.c ft_strnstr.c \
 ft_strrchr.c ft_strsplit.c ft_strstr.c ft_strsub.c ft_strtrim.c ft_tolower.c ft_toupper.c ft_lstnew.c ft_lstdelone.c \
 ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c ft_putnstr.c ft_putnstr_fd.c ft_lstcount.c ft_strichr.c get_next_line.c \
-ft_power.c ft_square_root.c ft_absolute.c ft_strndupchr.c ft_atod.c ft_atoi_base.c ft_ishexa.c ft_is_space.c
+ft_power.c ft_square_root.c ft_absolute.c ft_strndupchr.c ft_atod.c ft_atoi_base.c ft_ishexa.c ft_is_space.c ft_str_is_double.c
 
 OBJ_PATH = ./objs/
 
