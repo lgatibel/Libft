@@ -6,7 +6,7 @@
 /*   By: lgatibel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/22 13:19:33 by lgatibel          #+#    #+#             */
-/*   Updated: 2016/06/22 14:23:13 by lgatibel         ###   ########.fr       */
+/*   Updated: 2016/06/23 14:04:55 by lgatibel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int			ft_str_is_double(char *str)
 	}
 	if (str[i] && str[i] != '.')
 		return (0);
-	else
+	else if (str[i])
 		++i;
 	while (str[i] && ft_isdigit(str[i]))
 		++i;
