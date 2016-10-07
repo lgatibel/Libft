@@ -6,7 +6,7 @@
 /*   By: lgatibel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 11:43:07 by lgatibel          #+#    #+#             */
-/*   Updated: 2016/10/07 11:11:03 by lgatibel         ###   ########.fr       */
+/*   Updated: 2016/10/07 12:37:32 by lgatibel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,8 @@ typedef	struct	s_list
 }				t_list;
 
 char			*ft_itoa(int n);
-char			*ft_itoa_base(long long nbr, int base);
+char			*ft_lltoa_base(long long nbr, int base);
+char			*ft_ulltoa_base(unsigned long long nbr, int base);
 char			*ft_strnew(size_t size);
 char			*ft_strdup(const char *s1);
 char			*ft_reverse_tab(char *tab, int start, int end);

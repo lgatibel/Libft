@@ -1,38 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa_base.c                                     :+:      :+:    :+:   */
+/*   ft_ulltoa_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lgatibel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/10/03 14:21:19 by lgatibel          #+#    #+#             */
-/*   Updated: 2016/10/07 11:09:42 by lgatibel         ###   ########.fr       */
+/*   Created: 2016/10/07 12:36:46 by lgatibel          #+#    #+#             */
+/*   Updated: 2016/10/07 12:41:15 by lgatibel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-static int		test_sign(long long *nbr, int base, char *tab, int *i)
-{
-	if (*nbr < 0 && base == 10)
-	{
-		tab[++*i] = '-';
-		*nbr = -*nbr;
-		return (1);
-	}
-	return (0);
-}
-
-char			*ft_itoa_base(long long nbr, int base)
+char			*ft_ulltoa_base(unsigned long long nbr, int base)
 {
 	int			i;
 	char		tab[21];
 	static char	tab_min[16] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
 		'a', 'b', 'c', 'd', 'e', 'f'};
-	int			sign;
 
 	i = -1;
-	sign = test_sign(&nbr, base, tab, &i);
 	if (base < 17 && base > 1 && nbr > 0)
 	{
 		while (nbr)
@@ -41,6 +28,8 @@ char			*ft_itoa_base(long long nbr, int base)
 			nbr /= base;
 		}
 	}
+	else if (nbr == 0)
+		tab[++i] = '0';
 	tab[++i] = '\0';
-	return (ft_strdup(ft_reverse_tab(tab, sign, --i)));
+	return (ft_strdup(ft_reverse_tab(tab, 0, --i)));
 }
