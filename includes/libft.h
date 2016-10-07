@@ -6,7 +6,7 @@
 /*   By: lgatibel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 11:43:07 by lgatibel          #+#    #+#             */
-/*   Updated: 2016/10/07 09:51:49 by lgatibel         ###   ########.fr       */
+/*   Updated: 2016/10/07 11:11:03 by lgatibel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ typedef	struct	s_list
 }				t_list;
 
 char			*ft_itoa(int n);
-char			*ft_itoa_base(int nbr, int base);
+char			*ft_itoa_base(long long nbr, int base);
 char			*ft_strnew(size_t size);
 char			*ft_strdup(const char *s1);
 char			*ft_reverse_tab(char *tab, int start, int end);
@@ -64,7 +64,7 @@ int				ft_isdigit(int c);
 int				ft_isalnum(int c);
 int				ft_isascii(int c);
 int				ft_isprint(int c);
-int				ft_str_is_double(char * str);
+int				ft_str_is_double(char *str);
 int				ft_str_is_hexa(const char *str);
 
 int				ft_toupper(int c);
