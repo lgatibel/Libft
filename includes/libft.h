@@ -6,7 +6,7 @@
 /*   By: lgatibel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 11:43:07 by lgatibel          #+#    #+#             */
-/*   Updated: 2016/10/03 14:42:28 by lgatibel         ###   ########.fr       */
+/*   Updated: 2016/10/07 09:51:49 by lgatibel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ char			*ft_itoa(int n);
 char			*ft_itoa_base(int nbr, int base);
 char			*ft_strnew(size_t size);
 char			*ft_strdup(const char *s1);
+char			*ft_reverse_tab(char *tab, int start, int end);
 char			*ft_strndupchr(const char c, int size);
 char			*ft_strtrim(char const *s);
 char			*ft_strchr(const char *s, int c);
