@@ -6,11 +6,11 @@
 /*   By: lgatibel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/03 14:21:19 by lgatibel          #+#    #+#             */
-/*   Updated: 2016/10/07 12:48:02 by lgatibel         ###   ########.fr       */
+/*   Updated: 2016/10/18 10:38:50 by lgatibel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include <libftprintf.h>
 
 static int		test_sign(long long *nbr, int base, char *tab, int *i)
 {
@@ -32,6 +32,8 @@ char			*ft_lltoa_base(long long nbr, int base)
 	int			sign;
 
 	i = -1;
+	if (nbr == -9223372036854775807 - 1)
+		return (ft_strdup("-9223372036854775808"));
 	sign = test_sign(&nbr, base, tab, &i);
 	if (base < 17 && base > 1 && nbr > 0)
 	{
