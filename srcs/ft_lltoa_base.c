@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libftprintf.h>
+#include <libft.h>
 
 static int		test_sign(long long *nbr, int base, char *tab, int *i)
 {
