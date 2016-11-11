@@ -1,7 +1,7 @@
 #include <error.h>
 #include <libft.h>
 
-void			error(int error, int line, char *file)
+void			error(char error, char line, char *file)
 {
 	char *str;
 	char *tmp;
@@ -20,5 +20,7 @@ void			error(int error, int line, char *file)
 		write(1, "\n", 1);
 		free(str);
 		free(tmp);
+		if (EXIT == STOP)
+			exit(2);
 	}
 }
