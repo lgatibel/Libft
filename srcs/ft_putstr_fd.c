@@ -6,23 +6,16 @@
 /*   By: lgatibel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/25 15:07:29 by lgatibel          #+#    #+#             */
-/*   Updated: 2015/12/17 15:24:26 by lgatibel         ###   ########.fr       */
+/*   Updated: 2016/11/10 18:50:14 by lgatibel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 void	ft_putstr_fd(char const *s, int fd)
 {
-	int i;
-
-	i = 0;
 	if (s)
 	{
-		while (s[i] != '\0')
-		{
-			ft_putchar_fd(s[i], fd);
-			i++;
-		}
+		write(fd, s, ft_strlen(s));
 	}
 }

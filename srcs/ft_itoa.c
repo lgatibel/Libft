@@ -6,7 +6,7 @@
 /*   By: lgatibel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 16:49:02 by lgatibel          #+#    #+#             */
-/*   Updated: 2015/12/11 12:23:23 by lgatibel         ###   ########.fr       */
+/*   Updated: 2016/11/09 14:44:32 by lgatibel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char			*ft_itoa(int n)
 	int		i;
 
 	i = 0;
-	nb = (char *)malloc(sizeof(char) * ft_compte(n) + 1);
+	nb = (char *)malloc(sizeof(char) * ((unsigned)ft_compte(n) + 1));
 	if (!nb)
 		return (NULL);
 	if (n == -2147483648)

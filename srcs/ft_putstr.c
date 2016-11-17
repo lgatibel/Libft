@@ -6,7 +6,7 @@
 /*   By: lgatibel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/25 15:07:29 by lgatibel          #+#    #+#             */
-/*   Updated: 2015/12/17 15:24:02 by lgatibel         ###   ########.fr       */
+/*   Updated: 2016/11/10 19:09:03 by lgatibel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,8 @@
 
 void	ft_putstr(char const *s)
 {
-	int i;
-
-	i = 0;
 	if (s)
-		while (s[i] != '\0')
-		{
-			ft_putchar(s[i]);
-			i++;
-		}
+	{
+		write(1, s, ft_strlen(s));
+	}
 }
