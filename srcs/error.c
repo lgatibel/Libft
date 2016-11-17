@@ -6,7 +6,7 @@
 /*   By: lgatibel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 17:31:06 by lgatibel          #+#    #+#             */
-/*   Updated: 2016/11/17 16:16:05 by lgatibel         ###   ########.fr       */
+/*   Updated: 2016/11/17 16:17:57 by lgatibel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void			error_arg(int required, int arg, int close)
 {
 	ft_putstr("Wrong number of argument, require ");
 	ft_putnbr(required);
-	ft_putstr(" instead of");
+	ft_putstr(" instead of ");
 	ft_putnbr(arg);
 	if (close == EXIT)
 		exit(2);
