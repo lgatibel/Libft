@@ -1,26 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstcount.c                                      :+:      :+:    :+:   */
+/*   error.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lgatibel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/17 15:35:48 by lgatibel          #+#    #+#             */
-/*   Updated: 2015/12/17 17:54:08 by lgatibel         ###   ########.fr       */
+/*   Created: 2016/11/10 18:27:57 by lgatibel          #+#    #+#             */
+/*   Updated: 2016/11/17 12:43:18 by lgatibel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#ifndef ERROR_H
+# define ERROR_H
+# define UNDEFINED 0
+# define MALLOC 1
+# define INIT 2
+# define OPEN 3
 
-int		ft_lstcount(t_list *list)
-{
-	int	nb;
-
-	nb = 0;
-	while (list)
-	{
-		list = list->next;
-		nb++;
-	}
-	return (nb);
-}
+void				error(int error, int line, char *file);
+#endif

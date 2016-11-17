@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 void		ft_putnbr(int n)
 {
@@ -26,9 +26,7 @@ void		ft_putnbr(int n)
 			n = -n;
 		}
 		else if (n > 9)
-		{
 			ft_putnbr(n / 10);
-		}
 		ft_putchar(n % 10 + 48);
 	}
 }
