@@ -6,12 +6,14 @@
 /*   By: lgatibel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 18:27:57 by lgatibel          #+#    #+#             */
-/*   Updated: 2016/11/17 15:38:20 by lgatibel         ###   ########.fr       */
+/*   Updated: 2016/11/17 16:15:19 by lgatibel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ERROR_H
 # define ERROR_H
+# define EXIT -1
+# define NO_EXIT 0
 # define UNDEFINED 0
 # define MALLOC 1
 # define INIT 2
@@ -19,5 +21,6 @@
 # define CLOSE 4
 # define ARGUMENT 5
 
-int				error(int error, int line, char *file);
+void			error_arg(int line, int arg, int close);
+void			error(int error, int line, char *file, int close);
 #endif
