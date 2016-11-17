@@ -6,7 +6,7 @@
 /*   By: lgatibel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/04 17:11:30 by lgatibel          #+#    #+#             */
-/*   Updated: 2016/10/04 11:28:15 by lgatibel         ###   ########.fr       */
+/*   Updated: 2016/11/17 12:51:20 by lgatibel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,7 +104,7 @@ static int			ft_read(int const fd, char **line, t_cache **cache)
 
 int					get_next_line(int const fd, char **line)
 {
-	t_cache	static	cache;
+	static t_cache	cache;
 	t_cache			**tmp;
 	t_cache			*svg;
 
