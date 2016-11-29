@@ -6,7 +6,7 @@
 /*   By: lgatibel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 17:31:06 by lgatibel          #+#    #+#             */
-/*   Updated: 2016/11/17 16:17:57 by lgatibel         ###   ########.fr       */
+/*   Updated: 2016/11/29 16:51:43 by lgatibel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,16 @@ void			error_arg(int required, int arg, int close)
 	ft_putnbr(arg);
 	if (close == EXIT)
 		exit(2);
+}
+
+void			error_paring(char *file, char *error, int line)
+{
+	ft_putstr("Parsing erro in ");
+	ft_putstr(file);
+	ft_putstr(", line : ");
+	ft_putnbr(line);
+	ft_putstr(" : ");
+	ft_putendl(error);
 }
 
 void			error(int error, int line, char *file, int close)

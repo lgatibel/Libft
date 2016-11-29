@@ -6,7 +6,7 @@
 /*   By: lgatibel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 18:27:57 by lgatibel          #+#    #+#             */
-/*   Updated: 2016/11/17 16:15:19 by lgatibel         ###   ########.fr       */
+/*   Updated: 2016/11/29 16:52:24 by lgatibel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,9 @@
 # define OPEN 3
 # define CLOSE 4
 # define ARGUMENT 5
+# define PARSING 6
 
+void			error_parse(char *file, char *error,int line);
 void			error_arg(int line, int arg, int close);
 void			error(int error, int line, char *file, int close);
 #endif
