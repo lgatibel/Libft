@@ -6,7 +6,7 @@
 /*   By: lgatibel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 18:27:57 by lgatibel          #+#    #+#             */
-/*   Updated: 2016/11/29 16:52:24 by lgatibel         ###   ########.fr       */
+/*   Updated: 2016/11/30 17:09:04 by lgatibel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 # define CLOSE 4
 # define ARGUMENT 5
 # define PARSING 6
+# define EXTENSION 7
 
 void			error_parse(char *file, char *error,int line);
 void			error_arg(int line, int arg, int close);

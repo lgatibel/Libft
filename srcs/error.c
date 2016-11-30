@@ -6,7 +6,7 @@
 /*   By: lgatibel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 17:31:06 by lgatibel          #+#    #+#             */
-/*   Updated: 2016/11/29 17:03:03 by lgatibel         ###   ########.fr       */
+/*   Updated: 2016/11/30 17:15:13 by lgatibel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,16 @@ void			error_arg(int required, int arg, int close)
 	if (close == EXIT)
 		exit(2);
 }
+
+void			error_extension(char *extension, int close)
+{
+	ft_putstr("Bad extension : ");
+	ft_putstr(extension);
+	ft_putstr(" required!!!");
+	if (close == EXIT)
+		exit(2);
+}
+
 
 void			error_parse(char *file, char *error, int line)
 {
