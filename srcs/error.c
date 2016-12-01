@@ -6,7 +6,7 @@
 /*   By: lgatibel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 17:31:06 by lgatibel          #+#    #+#             */
-/*   Updated: 2016/12/01 10:09:06 by lgatibel         ###   ########.fr       */
+/*   Updated: 2016/12/01 13:33:50 by lgatibel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ void			error_extension(char *extension, int close)
 	if (close == EXIT)
 		exit(2);
 }
-
 
 void			error_parse(char *file, char *error, int line)
 {

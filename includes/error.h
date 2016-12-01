@@ -6,7 +6,7 @@
 /*   By: lgatibel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 18:27:57 by lgatibel          #+#    #+#             */
-/*   Updated: 2016/12/01 11:34:33 by lgatibel         ###   ########.fr       */
+/*   Updated: 2016/12/01 13:33:22 by lgatibel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 # define PARSING 6
 # define EXTENSION 7
 
-void			error_parse(char *file, char *error,int line);
+void			error_parse(char *file, char *error, int line);
 void			error_extension(char *file, int close);
 void			error_arg(int line, int arg, int close);
 void			error(int error, int line, char *file, int close);
