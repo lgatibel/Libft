@@ -6,7 +6,7 @@
 /*   By: lgatibel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 17:31:06 by lgatibel          #+#    #+#             */
-/*   Updated: 2016/11/30 17:15:13 by lgatibel         ###   ########.fr       */
+/*   Updated: 2016/12/01 10:09:06 by lgatibel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,11 +60,12 @@ void			error(int error, int line, char *file, int close)
 		else if (error == CLOSE)
 			str = ft_strjoin("Close error in file : ", file);
 		tmp = str;
-		str = ft_strjoin(str, "at line : ");
+		str = ft_strjoin(str, " at line : ");
 		free(tmp);
 		ft_putstr(str);
 		ft_putnbr(line);
 		free(str);
+		ft_putchar('\n');
 	}
 	if (close == 1)
 		exit(2);
