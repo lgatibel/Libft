@@ -6,7 +6,7 @@
 #    By: lgatibel <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/30 09:23:55 by lgatibel          #+#    #+#              #
-#    Updated: 2016/12/01 13:30:56 by lgatibel         ###   ########.fr        #
+#    Updated: 2016/12/01 14:17:03 by lgatibel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,6 +36,8 @@ LIB = -L. -lft
 
 INC = -I./includes/
 
+INC_PATH = ./includes/
+
 CC = clang
 
 all: $(NAME)
@@ -61,4 +63,4 @@ fclean: clean
 re: fclean all
 
 norme:
-	@norminette $(SRC) ./includes/
+	@norminette $(SRC_PATH) $(INC_PATH)
