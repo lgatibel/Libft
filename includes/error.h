@@ -6,13 +6,14 @@
 /*   By: lgatibel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 18:27:57 by lgatibel          #+#    #+#             */
-/*   Updated: 2016/11/30 17:17:53 by lgatibel         ###   ########.fr       */
+/*   Updated: 2016/12/01 11:34:33 by lgatibel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ERROR_H
 # define ERROR_H
-# define EXIT -1
+# define NO_EXIT 0
+# define EXIT 1
 # define NO_EXIT 0
 # define UNDEFINED 0
 # define MALLOC 1
