@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strisnum.c                                      :+:      :+:    :+:   */
+/*   ft_strishexa.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lgatibel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/01 13:26:50 by lgatibel          #+#    #+#             */
-/*   Updated: 2016/12/05 10:07:01 by lgatibel         ###   ########.fr       */
+/*   Created: 2016/12/05 09:55:58 by lgatibel          #+#    #+#             */
+/*   Updated: 2016/12/05 10:06:37 by lgatibel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-int				ft_strisnum(char *str)
+int			ft_strishexa(char *str)
 {
 	int		i;
 
 	i = -1;
 	while (str[++i])
-		if (!ft_isdigit(str[i]))
+		if (!ft_ishexa(str[i]))
 			return (0);
 	return (1);
 }

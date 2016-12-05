@@ -6,7 +6,7 @@
 /*   By: lgatibel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 11:43:07 by lgatibel          #+#    #+#             */
-/*   Updated: 2016/12/01 13:31:42 by lgatibel         ###   ########.fr       */
+/*   Updated: 2016/12/05 10:07:20 by lgatibel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,8 @@ int				ft_power(int nb, int power);
 int				ft_ishexa(int c);
 int				ft_isalpha(int c);
 int				ft_isdigit(int c);
-int				ft_strisnum(char *number);
+int				ft_strisnum(char *str);
+int				ft_strishexa(char *str);
 int				ft_isalnum(int c);
 int				ft_isascii(int c);
 int				ft_isprint(int c);

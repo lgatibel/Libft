@@ -6,7 +6,7 @@
 #    By: lgatibel <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/30 09:23:55 by lgatibel          #+#    #+#              #
-#    Updated: 2016/12/01 14:17:03 by lgatibel         ###   ########.fr        #
+#    Updated: 2016/12/05 10:05:30 by lgatibel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ ft_strlen.c ft_strmap.c ft_strmapi.c ft_strncat.c ft_strncmp.c ft_strncpy.c ft_s
 ft_strrchr.c ft_strsplit.c ft_strstr.c ft_strsub.c ft_strtrim.c ft_tolower.c ft_toupper.c ft_lstnew.c ft_lstdelone.c \
 ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c ft_putnstr.c ft_putnstr_fd.c ft_lstcount.c ft_strichr.c get_next_line.c \
 ft_power.c ft_square_root.c ft_absolute.c ft_strndupchr.c ft_atod.c ft_atoi_base.c ft_ishexa.c ft_is_space.c ft_str_is_double.c ft_str_is_hexa.c ft_lltoa_base.c ft_strtoupper.c ft_reverse_tab.c \
-ft_ulltoa_base.c error.c ft_strisnum.c
+ft_ulltoa_base.c error.c ft_strisnum.c ft_strishexa.c
 
 OBJ_PATH = ./objs/
 
