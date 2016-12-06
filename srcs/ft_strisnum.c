@@ -6,7 +6,7 @@
 /*   By: lgatibel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/01 13:26:50 by lgatibel          #+#    #+#             */
-/*   Updated: 2016/12/05 10:07:01 by lgatibel         ###   ########.fr       */
+/*   Updated: 2016/12/06 11:03:51 by lgatibel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ int				ft_strisnum(char *str)
 	int		i;
 
 	i = -1;
+	if (str[0] == '-')
+		i++;
 	while (str[++i])
 		if (!ft_isdigit(str[i]))
 			return (0);

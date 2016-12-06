@@ -6,7 +6,7 @@
 /*   By: lgatibel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 16:27:52 by lgatibel          #+#    #+#             */
-/*   Updated: 2016/10/04 11:23:20 by lgatibel         ###   ########.fr       */
+/*   Updated: 2016/12/06 09:57:40 by lgatibel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,9 @@ int				ft_atoi_base(const char *str, int base)
 	i = -1;
 	sign = 1;
 	if (base > 0 && base < 17)
+	{
+		if (!ft_strncmp(str, "0x", 2) || !ft_strncmp(str, "0X", 2))
+			i += 2;
 		while (str[++i])
 		{
 			if (ft_ishexa(str[i]))
@@ -68,5 +71,6 @@ int				ft_atoi_base(const char *str, int base)
 			else if (!ft_is_space(str[i]))
 				return (0);
 		}
+	}
 	return (0);
 }
