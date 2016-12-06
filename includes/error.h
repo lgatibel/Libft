@@ -6,7 +6,7 @@
 /*   By: lgatibel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 18:27:57 by lgatibel          #+#    #+#             */
-/*   Updated: 2016/12/01 13:33:22 by lgatibel         ###   ########.fr       */
+/*   Updated: 2016/12/06 13:09:40 by lgatibel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,5 @@ void			error_parse(char *file, char *error, int line);
 void			error_extension(char *file, int close);
 void			error_arg(int line, int arg, int close);
 void			error(int error, int line, char *file, int close);
+void			err(char *file, int line, char *message, int close);
 #endif
