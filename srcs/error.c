@@ -6,7 +6,7 @@
 /*   By: lgatibel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 17:31:06 by lgatibel          #+#    #+#             */
-/*   Updated: 2016/12/06 17:18:17 by lgatibel         ###   ########.fr       */
+/*   Updated: 2016/12/06 18:58:22 by lgatibel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ void			err(char *file, int line, char *message, int close)
 	str = ft_strjoin("error in file : ", file);
 	tmp = str;
 	str = ft_strjoin(str, "at line ");
-	//free (tmp);
+	free (tmp);
 	tmp = message;
 	tmp = ft_strjoin(": ", tmp);
 	free (tmp);
@@ -86,8 +86,7 @@ void			err(char *file, int line, char *message, int close)
 	ft_putnbr(line);
 	ft_putstr(" , ");
 	ft_putendl(message);
-	//free(str);
-	//free(message);
+	free(str);
 	if (close == 1)
 		exit(2);
 }
