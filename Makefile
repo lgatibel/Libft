@@ -6,7 +6,7 @@
 #    By: lgatibel <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/30 09:23:55 by lgatibel          #+#    #+#              #
-#    Updated: 2016/12/05 10:05:30 by lgatibel         ###   ########.fr        #
+#    Updated: 2016/12/16 11:32:36 by lgatibel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,7 @@ CC = clang
 
 all: $(NAME)
 
-.PHONY: clean fclean re
+.PHONY: all clean fclean re
 
 $(NAME): $(OBJ)
 	@ar rc $(NAME) $(OBJ)
@@ -54,11 +54,9 @@ $(addprefix $(OBJ_PATH),%.o) : $(addprefix $(SRC_PATH),%.c)
 
 clean:
 	@rm -rf $(OBJ_PATH)
-	@echo "Delete :\n$(OBJ)\ndone1!\n"
 
-fclean: clean 
+fclean: clean
 	@rm -f $(NAME)
-	@echo "Delete :\n$(NAME)\ndone1!\n"
 
 re: fclean all
 
