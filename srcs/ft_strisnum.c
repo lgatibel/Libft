@@ -26,8 +26,11 @@ int				ft_strisnum(char *str)
 	while (str[++i])
 		if (!ft_isdigit(str[i]))
 		{
-			if (!dot && ++dot)
+			if (!dot && str[i] == '.')
+			{
+				dot = 1;
 				++i;
+			}
 			else
 				return (0);
 		}
