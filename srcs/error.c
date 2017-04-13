@@ -77,7 +77,7 @@ void			err(char *file, int line, char *message, int close)
 
 	str = ft_strjoin("error in file : ", file);
 	tmp = str;
-	str = ft_strjoin(str, "at line ");
+	str = ft_strjoin(str, " at line ");
 	free(tmp);
 	tmp = message;
 	tmp = ft_strjoin(": ", tmp);
